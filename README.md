@@ -84,11 +84,12 @@ Usage of `racon` is as following:
             containing sequences which will be corrected
 
     options:
+        options:
         -u, --include-unpolished
             output unpolished target sequences
         -f, --fragment-correction
-            perform fragment correction instead of contig polishing (overlaps
-            file should contain dual/self overlaps!)
+            perform fragment correction instead of contig polishing
+            (overlaps file should contain dual/self overlaps!)
         -w, --window-length <int>
             default: 500
             size of window on which POA is performed
@@ -100,6 +101,19 @@ Usage of `racon` is as following:
             maximum allowed error rate used for filtering overlaps
         --no-trimming
             disables consensus trimming at window ends
+        
+        *** Not available in main Racon
+        -L, --liftover <string>
+            default: ''
+            optional prefix of the output liftover files which convert
+            the draft sequence to the output consensus. PAF and VCF files
+            are always written with this prefix, and SAM can optionally
+            be written if the -S option is provided.            VCF, PAF, SAM. Format is determined from extension.
+        -S, --liftover-sam
+            Used only in combination with the -L option, this writes out
+            a SAM formatted alignment of the polished sequences vs the draft.
+        *** Not available in main Racon
+        
         -m, --match <int>
             default: 3
             score for matching bases
@@ -109,6 +123,9 @@ Usage of `racon` is as following:
         -g, --gap <int>
             default: -4
             gap penalty (must be negative)
+        -B, --bed <str>
+            default: ''
+            path to a BED file with regions to polish
         -t, --threads <int>
             default: 1
             number of threads
