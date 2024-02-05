@@ -51,12 +51,11 @@ Use these directions to build into a conda environment for the T2T Automated pip
 
 ```bash
 conda create -n name
+conda activate name
 conda install cmake git
 
 git clone --recursive https://github.com/lbcb-sci/racon.git racon
 cd racon
-mkdir build
-cd build
 cmake -DCMAKE_BUILD_TYPE=Release ..
 make
 ```
