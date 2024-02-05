@@ -46,6 +46,21 @@ To build unit tests add `-Dracon_build_tests=ON` while running `cmake`. After in
 
 To build the wrapper script add `-Dracon_build_wrapper=ON` while running `cmake`. After installation, an executable named `racon_wrapper` (python script) will be created in `build/bin`.
 
+### Installation in Conda environment
+Use these directions to build into a conda environment for the T2T Automated pipeline.
+
+```bash
+conda create -n name
+conda install cmake git
+
+git clone --recursive https://github.com/lbcb-sci/racon.git racon
+cd racon
+mkdir build
+cd build
+cmake -DCMAKE_BUILD_TYPE=Release ..
+make
+```
+
 ### CUDA Support
 Racon makes use of [NVIDIA's GenomeWorks SDK](https://github.com/clara-parabricks/GenomeWorks) for CUDA accelerated polishing and alignment.
 
