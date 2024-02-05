@@ -58,15 +58,6 @@ cmake -DCMAKE_BUILD_TYPE=Release -Dracon_enable_cuda=ON ..
 make
 ```
 
-***Note***: Short read polishing with CUDA is still in development!
-
-### Packaging
-To generate a Debian package for `racon`, run the following command from the build folder -
-
-```bash
-make package
-```
-
 ## Usage
 Usage of `racon` is as following:
 
@@ -160,11 +151,3 @@ Usage of `racon_wrapper` equals the one of `racon` with two additional parameter
             subsample sequences to desired coverage (2nd argument) given the
             reference length (1st argument)
         ...
-
-## Contact information
-
-For additional information, help and bug reports please send an email to one of the following: ivan.sovic@irb.hr, robert.vaser@fer.hr, mile.sikic@fer.hr, nagarajann@gis.a-star.edu.sg
-
-## Acknowledgment
-
-This work has been supported in part by Croatian Science Foundation under the project UIP-11-2013-7353. IS is supported in part by the Croatian Academy of Sciences and Arts under the project "Methods for alignment and assembly of DNA sequences using nanopore sequencing data". NN is supported by funding from A*STAR, Singapore.
