@@ -54,7 +54,7 @@ conda create -n name
 conda activate name
 conda install cmake git
 
-git clone --recursive https://github.com/lbcb-sci/racon.git racon
+git clone --recursive [https://github.com/pgrady1322/racon.git] racon
 cd racon
 cmake -DCMAKE_BUILD_TYPE=Release ..
 make
