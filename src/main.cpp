@@ -117,8 +117,8 @@ void WriteLiftoverFile(const std::string& out_prefix, bool write_sam, const std:
         // PAF output.
         {
             fprintf(fp_out_paf, "%s\t%lu\t%lu\t%lu\t+\t%s\t%lu\t%lu\t%lu\t%lu\t%lu\t60\tcg:Z:%s\n",
-                                cons_header.c_str(), it->data().size(), 0, it->data().size(),
-                                draft_header.c_str(), draft_seq->data().size(), 0, draft_seq->data().size(),
+                                cons_header.c_str(), it->data().size(), 0UL, it->data().size(),
+                                draft_header.c_str(), draft_seq->data().size(), 0UL, draft_seq->data().size(),
                                 it->data().size(), draft_seq->data().size(),
                                 it->cigar().c_str());
         }

@@ -132,9 +132,8 @@ private:
     bool is_valid_;
     bool is_transmuted_;
     // std::vector<std::tuple<uint32_t, uint32_t, uint32_t>> breaking_points_;
-    std::vector<std::pair<uint32_t, uint32_t>> dual_breaking_points_;
-
     std::vector<WindowInterval> breaking_points_;
+    std::vector<std::pair<uint32_t, uint32_t>> dual_breaking_points_;
 };
 
 inline std::ostream& operator<<(::std::ostream& os, const Overlap& a) {

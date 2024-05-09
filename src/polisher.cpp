@@ -62,7 +62,7 @@ std::unique_ptr<Polisher> createPolisher(const std::string& sequences_path,
     PolisherType type, uint32_t window_length, double quality_threshold,
     double error_threshold, bool trim, bool produce_liftover, int8_t match, int8_t mismatch, int8_t gap,
     uint32_t num_threads, uint32_t cudapoa_batches, bool cuda_banded_alignment,
-    uint32_t cudaaligner_batches, uint32_t cudaaligner_band_width) {
+    uint32_t cudaaligner_batches, [[maybe_unused]] uint32_t cudaaligner_band_width) {
 
     if (type != PolisherType::kC && type != PolisherType::kF) {
         fprintf(stderr, "[racon::createPolisher] error: invalid polisher type!\n");
