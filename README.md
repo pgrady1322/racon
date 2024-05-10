@@ -1,5 +1,4 @@
 # Racon
-[![Published in Genome Research](https://img.shields.io/badge/published%20in-Genome%20Research-blue.svg)](https://doi.org/10.1101/gr.214270.116)
 
 Consensus module for raw de novo DNA assembly of long uncorrected reads. 
 **Forked from main repo for independent modification & use of liftover branch**
